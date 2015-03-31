@@ -38,7 +38,7 @@
             </div>
             <br />
             <div class="textareadiv">
-            <textarea name="fromtext" id="totext" rows="6" cols="50"><?php echo $from_text; ?></textarea>
+            <textarea name="fromtext" id="fromtext" rows="6" cols="50"><?php echo $from_text; ?></textarea>
             
             <textarea name="totext" id="totext" rows="6" cols="50" readonly><?php echo $translate; ?></textarea>
             </div>
@@ -76,6 +76,10 @@
         var fromText = $("#fromselect option:selected").text();
         var toVal = $("#toselect option:selected").val();
         var toText = $("#toselect option:selected").text();
+        var fromTxtArea = $("#fromtext").text();
+        var toTxtArea = $("#totext").text();
+        $("#fromtext").val(toTxtArea);
+        //$("#totext").val(fromTxtArea);
         $("#fromselect option:selected").val(toVal);
         $("#fromselect option:selected").text(toText);
         $("#toselect option:selected").val(fromVal);
