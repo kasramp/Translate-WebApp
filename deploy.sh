@@ -15,7 +15,7 @@
 
 
 CURRENT_PATH=`pwd`;
-HARD_PATH="/var/www/";
+HARD_PATH="/var/www/html";
 DIRECTORY_NAME="Translate";
 if [ -z "$1" ]; then
 	HARD_PATH=$HARD_PATH;
@@ -26,7 +26,7 @@ fi
 #mkdir -p $HARD_PATH$DIRECTORY_NAME;
 #cp -r * $HARD_PATH$DIRECTORY_NAME;
 #REPLACE WITH RSYNC
-rsync -av $CURRENT_PATH $HARD_PATH;
+rsync -avh --progress $CURRENT_PATH $HARD_PATH;
 #GET CP RETURN VALUE, WHICH HOLDS IN LAST VARIABLE, THE COMMAND SHOWS GET LAST VARIABLE IN BASH
 #echo $?; 
 if [ $? -eq 0 ]; then
