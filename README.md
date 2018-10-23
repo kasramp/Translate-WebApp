@@ -7,7 +7,7 @@ Translate Web Application has been developed with Php, CSS and Jquery. It utiliz
 
 ## Running the application
 
-Need to have `docker` installed in the system. Then run
+Need to have `docker` installed on the system. Then run
 ```bash
 $ run.sh
 ```
